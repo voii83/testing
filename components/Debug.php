@@ -1,7 +1,5 @@
 <?php
 
-namespace components;
-
 class Debug
 {
     public static function dd($value)

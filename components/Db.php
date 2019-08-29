@@ -1,7 +1,5 @@
 <?php
 
-namespace components;
-
 class Db
 {
 

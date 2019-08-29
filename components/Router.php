@@ -1,7 +1,5 @@
 <?php
 
-namespace components;
-
 class Router
 {
 	private $router;
@@ -17,9 +15,9 @@ class Router
 		$uri = $this->getUri();
 
 		foreach ($this->router as $uriPattern => $path) {
-			if (preg_match('~^$uriPattern$~', $uri)) {
+			if (preg_match("~^$uriPattern$~", $uri)) {
 
-				$internalRoute = preg_replace('~$uriPattern~', $path, $uri);
+				$internalRoute = preg_replace("~$uriPattern~", $path, $uri);
 
 				$segments = explode('/', $internalRoute);
 				$controllerName = array_shift($segments).'Controller';
